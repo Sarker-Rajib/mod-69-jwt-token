@@ -31,7 +31,7 @@ const Checkout = () => {
 
         // }
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://genius-car-server-69.vercel.app/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -44,12 +44,9 @@ const Checkout = () => {
                 if(data.acknowledged){
                     alert('Order placed successfully')
                     form.reset();
-                    
                 }
             })
             .catch(er => console.error(er));
-
-
     }
 
     return (
